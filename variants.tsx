@@ -1,4 +1,4 @@
-export const fadIn =(direction , delay)=>{
+export const fadIn =(direction:any , delay:number)=>{
     return {
         hidden:{
             y:direction ==='up'? 80:direction ==='down' ? -80:0,
