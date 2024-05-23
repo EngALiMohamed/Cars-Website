@@ -1,7 +1,6 @@
-"use client";
+'use client'
 import { useContext, useEffect,useState } from "react"
 import Image from "next/image"
-// import Link from "react-scroll"
 import { Link } from "react-scroll";
 import SearchMobile from "./SearchMobile"
 import { useMediaQuery } from "react-responsive"
@@ -41,9 +40,7 @@ export default function Header() {
     }    
   })
 
-  // interface Iprop{
 
-  // }
   return(
   <header className={`${header ? 'bg-white shadow-md py-2':'bg-transparent shadow-none py-4'}
     fixed w-full max-w-[1920px] mx-auto z-20 transition-all duration-300`}>
@@ -51,7 +48,7 @@ export default function Header() {
     xl:justify-between">
       <div className="flex justify-between items-center px-4">
          <Link to="home" smooth={desktopMode} spy={true} className="cursor-pointer">
-          <img src={'/icons/logo.svg'} width={194} height={64} alt="" />
+          <Image src={'/icons/logo.svg'} width={194} height={64} alt="" />
         </Link>  
         <div onClick={()=>setNav(!nav)} className="cursor-pointer xl:hidden">{nav? (<BiX className="text-4xl"/>):
         (<BiMenuAltRight className="text-4xl"/>)}</div>
